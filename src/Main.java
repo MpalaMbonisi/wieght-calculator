@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.util.Random;
 import java.util.Scanner;
 import java.io.IOException;
 public class Main {
@@ -28,6 +29,21 @@ public class Main {
         // cast the 'intResultMpala' to a char type
         charResultMpala = (char) intResultMpala;
         System.out.println("\n\nThe result when the Integer above is cast to a Char is : " + charResultMpala);
+
+        // add the 'charResultMpala' with a random number
+
+        while(true){
+            // generate a random number
+            Random rdm = new Random();
+            int rdmNum = rdm.nextInt(50);
+
+            if ((rdmNum + charResultMpala) <= 128){
+                intFinalMpala = rdmNum + charResultMpala;
+                System.out.println("The result with arithmetic operations applied is : " + intFinalMpala);
+                break;
+            }
+
+        }
 
     }
 }
