@@ -25,5 +25,9 @@ public class Main {
         intResultMpala = (int) dblResultMpala;
         System.out.println("\n\nThe result when cast to Int is : " + intResultMpala + "kg");
 
+        // cast the 'intResultMpala' to a char type
+        charResultMpala = (char) intResultMpala;
+        System.out.println("\n\nThe result when the Integer above is cast to a Char is : " + charResultMpala);
+
     }
 }
