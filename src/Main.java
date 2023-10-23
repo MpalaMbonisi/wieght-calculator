@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 import java.io.IOException;
 public class Main {
@@ -16,6 +17,13 @@ public class Main {
         // operations
         dblResultMpala = weightMpala * .38; // calculating user weight in Mars
 
-        System.out.println("Your weight on Earth is: " + weightMpala + "kg.\nYour weight on Mars is : "+ dblResultMpala + "kg");
+        DecimalFormat df = new DecimalFormat("####0.0000"); // this is for formatting the double result to 4 decimal places
+
+        System.out.println("Your weight on Earth is: " + df.format(dblResultMpala) + "kg.\nYour weight on Mars is : "+ dblResultMpala + "kg");
+
+        // cast the double result to Int
+        intResultMpala = (int) dblResultMpala;
+        System.out.println("\n\nThe result when cast to Int is : " + intResultMpala + "kg");
+
     }
 }
